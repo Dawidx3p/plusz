@@ -1,24 +1,29 @@
-/* Basic reset */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body and fonts */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
 }
 
-/* Header styles */
+/* Header Styles */
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
+    background-color: white;
+    padding: 20px 0;
     text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Minimal shadow */
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #333;
 }
 
 header nav ul {
@@ -32,146 +37,172 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: white;
+    color: #7D0D5E;
+    font-weight: 600;
+    font-size: 1.1em;
     text-decoration: none;
+}
+
+header nav ul li a:hover {
+    color: #9f4083;
 }
 
 /* Main content */
 main {
-    margin: 20px;
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 1200px;
 }
 
-audio {
-    display: block;
-    margin: 20px 0;
-}
-
-/* Episodes Page Styles */
+/* Section Styling */
 section {
-    margin: 20px 0;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Soft shadows */
 }
 
-h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+section h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
-p {
-    margin-top: 10px;
+section p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
 }
 
+/* Audio player styling */
 audio {
     width: 100%;
-    margin-top: 10px;
+    margin: 20px 0;
+}
+
+/* Button Styles */
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #7D0D5E;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #9f4083;
+}
+
+.button:active {
+    background-color: #5b0844;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-/* About Page Styles */
-.about-section {
-    margin: 20px;
-    padding: 20px;
     background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-.about-section h2 {
-    font-size: 1.8em;
     color: #333;
-    margin-bottom: 15px;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
 }
 
-.about-section p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #666;
+footer p {
+    font-size: 1em;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-    header nav ul {
-        display: block;
-        text-align: center;
-    }
-    
-    audio {
-        width: 100%;
-    }
-}
-
-/* Contact page styling */
+/* Contact Form (applied previously) */
 .contact-section {
-    margin: 20px;
+    max-width: 600px;
+    margin: 40px auto;
     padding: 20px;
     background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .contact-section h2 {
-    font-size: 1.8em;
+    font-size: 2em;
     color: #333;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.contact-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .contact-section form {
     display: flex;
     flex-direction: column;
-}
-
-.contact-section label {
-    margin: 10px 0 5px 0;
-    font-weight: bold;
+    gap: 20px;
 }
 
 .contact-section input,
 .contact-section textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 15px;
+    border: 2px solid #eaeaea;
+    border-radius: 8px;
     font-size: 1em;
+    transition: border-color 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+    border-color: #7D0D5E;
+    background-color: white;
+    outline: none;
+}
+
+.contact-section textarea {
+    resize: none;
 }
 
 .contact-section button {
-    padding: 10px 15px;
-    margin-top: 15px;
-    background-color: #333;
+    padding: 15px;
+    background-color: #7D0D5E;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .contact-section button:hover {
-    background-color: #555;
+    background-color: #9f4083;
 }
 
-/* Social media section */
+.contact-section button:active {
+    background-color: #5b0844;
+}
+
+/* Social Media Section */
 .social-media {
-    margin: 20px;
+    max-width: 600px;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .social-media ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 .social-media ul li {
@@ -180,69 +211,48 @@ footer {
 
 .social-media ul li a {
     font-size: 1.2em;
-    color: #333;
-    text-decoration: none;
+    color: #7D0D5E;
 }
 
 .social-media ul li a:hover {
-    color: #555;
+    color: #9f4083;
 }
 
-/* Home page styling */
-.welcome-section {
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+
+    .button {
+        padding: 12px 25px;
+    }
 }
 
-.welcome-section h2 {
-    font-size: 1.8em;
-    color: #333;
-    margin-bottom: 15px;
-}
+@media (max-width: 600px) {
+    header nav ul {
+        text-align: center;
+    }
 
-.welcome-section p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #666;
-}
+    .contact-section, .social-media {
+        padding: 15px;
+    }
 
-.featured-episode {
-    margin: 20px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-.featured-episode h2 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-}
-
-.featured-episode p {
-    margin-top: 15px;
-    font-size: 1.1em;
-}
-
-.featured-episode audio {
-    margin-top: 10px;
-    width: 100%;
-}
-
-.button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-}
-
-.button:hover {
-    background-color: #555;
+    footer p {
+        font-size: 0.9em;
+    }
 }
