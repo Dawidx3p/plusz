@@ -237,7 +237,7 @@ footer p {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top;
+    object-position: right stop;
     z-index: 0;
     opacity: 0; /* Initially hidden */
     transition: opacity 1.5s ease-in-out; /* Smooth fade-in transition */
