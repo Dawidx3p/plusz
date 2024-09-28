@@ -1,5 +1,13 @@
 const toggle = document.getElementById('theme-toggle');
 const body = document.body;
+// JavaScript to toggle mobile menu
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+});
 
 toggle.addEventListener('click', () => {
     body.classList.toggle('dark-mode');

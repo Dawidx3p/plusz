@@ -8,14 +8,22 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to My Podcast Blog</h1>
+        <h1>My Podcast Blog</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="episodes.html">Episodes</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="episodes.html" class="nav-link">Episodes</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <!-- Hamburger Menu Icon for mobile -->
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -51,6 +59,7 @@
     </footer>
 
     <script src="js/animations.js"></script>
+    <script src="js/script.js"></script>
     <script>
         // Ensure the hero image is visible once loaded
 document.addEventListener("DOMContentLoaded", function () {
