@@ -218,6 +218,91 @@ footer p {
     color: #9f4083;
 }
 
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; /* Fallback background if image doesn't load */
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    z-index: 0;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1.5s ease-in-out; /* Smooth fade-in transition */
+}
+
+.hero-image.loaded {
+    opacity: 1; /* Make the image fully visible after load */
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    max-width: 40%;
+    animation: fadeIn 2s ease-out; /* Smooth fade-in animation for text */
+}
+
+.hero-text h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: slideIn 1.5s ease-out;
+}
+
+.hero-text p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    animation: slideIn 2s ease-out;
+}
+
+.hero-text .button {
+    padding: 15px 30px;
+    background-color: #7D0D5E;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    animation: fadeIn 2.5s ease-out;
+}
+
+.hero-text .button:hover {
+    background-color: #9f4083;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
@@ -241,6 +326,9 @@ footer p {
     .button {
         padding: 12px 25px;
     }
+    .hero-text {
+        max-width: 80%;
+    }
 }
 
 @media (max-width: 600px) {
@@ -255,4 +343,8 @@ footer p {
     footer p {
         font-size: 0.9em;
     }
+    .hero-text {
+        max-width: 100%;
+    }
 }
+

@@ -19,6 +19,16 @@
         </nav>
     </header>
 
+    <!-- Hero section with image -->
+    <section class="hero-section">
+        <img src="images/hero-image.jpg" alt="Podcast hero image" class="hero-image">
+        <div class="hero-text">
+            <h2>Your Journey Into Podcasts Starts Here</h2>
+            <p>Join us as we explore exciting stories, interviews, and insights!</p>
+            <a href="episodes.html" class="button">Explore Episodes</a>
+        </div>
+    </section>
+
     <main>
         <section class="welcome-section">
             <h2>Welcome to the Podcast Blog!</h2>
@@ -39,5 +49,23 @@
     <footer>
         <p>&copy; 2024 My Podcast Blog</p>
     </footer>
+
+    <script src="js/animations.js"></script>
+    <script>
+        // Ensure the hero image is visible once loaded
+document.addEventListener("DOMContentLoaded", function () {
+    const heroImage = document.querySelector('.hero-image');
+
+    // Add an event listener to load the image and add the 'loaded' class
+    heroImage.addEventListener('load', function () {
+        heroImage.classList.add('loaded');
+    });
+
+    // For browsers that cache the image and don't trigger 'load'
+    if (heroImage.complete) {
+        heroImage.classList.add('loaded');
+    }
+});
+    </script>
 </body>
 </html>
