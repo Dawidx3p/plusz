@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Kontakt</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <h1>Contact me</h1>
+        <h1>Skontaktuj się ze mną</h1>
         <nav>
             <div class="nav-container">
                 <ul class="nav-links">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="episodes.html" class="nav-link">Episodes</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    <li><a href="index.html" class="nav-link">Strona główna</a></li>
+                    <li><a href="episodes.html" class="nav-link">Odcinki</a></li>
+                    <li><a href="about.html" class="nav-link">O mnie</a></li>
+                    <li><a href="contact.html" class="nav-link active">Kontakt</a></li>
                 </ul>
-                <!-- Hamburger Menu Icon for mobile -->
+                <!-- Menu Hamburger dla mobilnych -->
                 <div class="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -30,25 +29,25 @@
 
     <main>
         <section class="contact-section">
-            <h2>Get in Touch</h2>
-            <p>If you have any questions or just want to say hi, feel free to fill out the form below, or connect with me through my social media accounts!</p>
+            <h2>Skontaktuj się ze mną</h2>
+            <p>Jeśli masz pytania lub chcesz po prostu się przywitać, wypełnij poniższy formularz lub skontaktuj się ze mną przez moje media społecznościowe!</p>
             
             <form action="#" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <label for="name">Imię</label>
+                <input type="text" id="name" name="name" placeholder="Twoje Imię" required>
                 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Twój e-mail" required>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="6" required></textarea>
+                <label for="message">Wiadomość</label>
+                <textarea id="message" name="message" rows="6" placeholder="Twoja wiadomość" required></textarea>
 
-                <button type="submit">Send Message</button>
+                <button type="submit">Wyślij wiadomość</button>
             </form>
         </section>
 
         <section class="social-media">
-            <h2>Follow Me</h2>
+            <h2>Obserwuj mnie</h2>
             <ul>
                 <li><a href="https://twitter.com">Twitter</a></li>
                 <li><a href="https://facebook.com">Facebook</a></li>
@@ -58,9 +57,12 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 My Podcast Blog</p>
+        <p>&copy; 2024 Mój Blog Podcastowy</p>
     </footer>
+
+    <!-- Skrypt do obsługi menu mobilnego -->
     <script src="js/animations.js"></script>
     <script src="js/script.js"></script>
+
 </body>
 </html>
