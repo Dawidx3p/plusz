@@ -16,6 +16,7 @@
                     <li><a href="episodes.html" class="nav-link">Odcinki</a></li>
                     <li><a href="about.html" class="nav-link">O mnie</a></li>
                     <li><a href="contact.html" class="nav-link active">Kontakt</a></li>
+                    <li><a href="subscribe.html" class="nav-link">Bądź na bieżąco</a></li>
                 </ul>
                 <!-- Menu Hamburger dla mobilnych -->
                 <div class="hamburger">
@@ -32,18 +33,21 @@
             <h2>Skontaktuj się ze mną</h2>
             <p>Jeśli masz pytania lub chcesz po prostu się przywitać, wypełnij poniższy formularz lub skontaktuj się ze mną przez moje media społecznościowe!</p>
             
-            <form action="#" method="post">
+            <form action="https://formspree.io/f/xrbznlnb" method="POST" id="contact-form">
                 <label for="name">Imię</label>
                 <input type="text" id="name" name="name" placeholder="Twoje Imię" required>
                 
                 <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="Twój e-mail" required>
-
+                <input type="email" id="email" name="_replyto" placeholder="Twój e-mail" required>
+            
                 <label for="message">Wiadomość</label>
                 <textarea id="message" name="message" rows="6" placeholder="Twoja wiadomość" required></textarea>
-
+            
                 <button type="submit">Wyślij wiadomość</button>
+                <p id="form-status" style="display: none;">Dziękujemy! Twoja wiadomość została wysłana.</p>
             </form>
+            
+            
         </section>
 
         <section class="social-media">
@@ -59,7 +63,32 @@
     <footer>
         <p>&copy; 2024 Mój Blog Podcastowy</p>
     </footer>
-
+    <script>
+        const form = document.getElementById('contact-form');
+        const statusMessage = document.getElementById('form-status');
+    
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Zapobiegaj domyślnej akcji formularza
+    
+            const formData = new FormData(form);
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    statusMessage.style.display = 'block'; // Pokaż wiadomość o sukcesie
+                    form.reset(); // Zresetuj formularz
+                } else {
+                    alert('Wystąpił błąd przy wysyłaniu formularza.');
+                }
+            }).catch(error => {
+                alert('Wystąpił problem z wysłaniem wiadomości.');
+            });
+        });
+    </script>
     <!-- Skrypt do obsługi menu mobilnego -->
     <script src="js/animations.js"></script>
     <script src="js/script.js"></script>

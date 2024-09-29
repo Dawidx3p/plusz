@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bądź na bieżąco</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Zapisz się do newslettera</h1>
+        <nav>
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Strona główna</a></li>
+                    <li><a href="episodes.html" class="nav-link">Odcinki</a></li>
+                    <li><a href="about.html" class="nav-link">O mnie</a></li>
+                    <li><a href="contact.html" class="nav-link">Kontakt</a></li>
+                    <li><a href="subscribe.html" class="nav-link active">Bądź na bieżąco</a></li>
+                </ul>
+                <!-- Menu Hamburger dla mobilnych -->
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="subscribe-section">
+            <h2>Zostań częścią naszego newslettera</h2>
+            <p>Zapisz się do naszego newslettera, aby być na bieżąco z najnowszymi odcinkami, wiadomościami i specjalnymi ofertami!</p>
+            
+            <form action="https://formspree.io/f/mqazrlrd" method="POST" id="subscribe-form">
+                <label for="email">Twój e-mail</label>
+                <input type="email" id="email" name="_replyto" placeholder="Wprowadź swój e-mail" required>
+
+                <button type="submit">Zapisz się</button>
+                <p id="form-status" style="display: none;">Dziękujemy! Zostałeś zapisany do newslettera.</p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mój Blog Podcastowy</p>
+    </footer>
+
+    <!-- Skrypt do obsługi menu mobilnego oraz wiadomości sukcesu -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const form = document.getElementById('subscribe-form');
+        const statusMessage = document.getElementById('form-status');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            navLinks.classList.toggle('open');
+        });
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(form);
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    statusMessage.style.display = 'block';
+                    form.reset();
+                } else {
+                    alert('Wystąpił problem z zapisaniem do newslettera.');
+                }
+            }).catch(error => {
+                alert('Wystąpił problem z połączeniem.');
+            });
+        });
+    </script>
+</body>
+</html>
