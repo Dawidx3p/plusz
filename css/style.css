@@ -349,6 +349,7 @@ footer p {
 }
 
 .hero-text h2 {
+    color: white;
     font-size: 3em;
     margin-bottom: 20px;
     animation: slideIn 1.5s ease-out;
@@ -357,6 +358,7 @@ footer p {
 .hero-text p {
     font-size: 1.5em;
     margin-bottom: 30px;
+    color: white;
     animation: slideIn 2s ease-out;
 }
 
