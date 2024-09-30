@@ -509,6 +509,13 @@ header h1 {
     border-bottom: 2px solid #9f4083; /* Active underline */
     color: #7D0D5E;
 }
+.special {
+    color: #197b4d;
+}
+.special:hover {
+    border-bottom: none;
+    color: #31ed95;
+}
 
 /* Hamburger Menu (Mobile) */
 .hamburger {
