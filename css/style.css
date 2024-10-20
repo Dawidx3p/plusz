@@ -1064,13 +1064,6 @@ footer {
     font-size: 0.9em; /* Mniejszy tekst w stopce */
 }
 
-iframe {
-    display: block;
-    margin: 0 auto; /* Wyśrodkowanie w poziomie */
-    max-width: 100%; /* Zapewnienie responsywności */
-    margin-bottom: 2rem;
-}
-
 .special-text{
     color: #9f4083;
     font-style: italic;
@@ -1161,7 +1154,7 @@ iframe {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 1001;
     left: 0;
     top: 0;
     width: 100%;
@@ -1203,6 +1196,7 @@ iframe {
     height: 0;
     overflow: hidden;
     max-width: 100%; /* Zapewnienie responsywności */
+    margin-bottom: 20px; /* Dodanie marginesu poniżej wideo */
 }
 
 .featured-episode iframe {
@@ -1212,7 +1206,7 @@ iframe {
     width: 100%;
     height: 100%;
     border: none;
-    border-radius: 10px; /* Dodajemy zaokrąglone rogi, opcjonalnie */
+    border-radius: 10px; /* Zaokrąglone rogi */
 }
 
 /* Dostosowanie iframe na mniejszych ekranach */
@@ -1222,3 +1216,29 @@ iframe {
         height: auto;
     }
 }
+
+/* Poprawki do tekstu i przycisków */
+.featured-episode p {
+    margin-top: 20px; /* Odstęp między wideo a tekstem */
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.button-container {
+    margin-top: 20px; /* Odstęp między tekstem a przyciskiem */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #7D0D5E;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #9f4083;
+}
+
