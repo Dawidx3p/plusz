@@ -158,7 +158,7 @@ section {
 section h2 {
     font-size: 2em;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-weight: 600;
 }
 
@@ -221,7 +221,7 @@ footer p {
 .contact-section h2 {
     font-size: 2em;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-weight: 600;
     text-align: center;
 }
@@ -351,7 +351,7 @@ footer p {
 .hero-text h2 {
     color: white;
     font-size: 3em;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     animation: slideIn 1.5s ease-out;
 }
 
@@ -614,7 +614,7 @@ header h1 {
 
 .hero-text h2 {
     font-size: 3em;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     animation: slideIn 1.5s ease-out;
 }
 
@@ -677,14 +677,15 @@ main {
 }
 
 .welcome-section h2 {
-    font-size: 2.2em;
-    margin-bottom: 20px;
+    font-size: 1.8em;
+    margin-bottom: 10px;
 }
 
 .welcome-section p {
-    font-size: 1.2em;
+    font-size: 1em;
     color: #555;
     line-height: 1.8;
+    font-weight: 300;
 }
 
 /* Featured Episode Section */
@@ -697,12 +698,12 @@ main {
 }
 
 .featured-episode h2 {
-    font-size: 2.2em;
-    margin-bottom: 20px;
+    font-size: 1.8em;
+    margin-bottom: 10px;
 }
 
 .featured-episode p {
-    font-size: 1.2em;
+    font-size: 1em;
     color: #555;
     line-height: 1.8;
 }
@@ -786,7 +787,7 @@ footer p {
 .subscribe-section h2 {
     font-size: 2em;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-weight: 600;
     text-align: center;
 }
@@ -851,4 +852,337 @@ footer p {
     color: green;
     text-align: center;
     margin-top: 15px;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Zastosowanie fontu Poppins */
+    font-weight: 300; /* Lżejsza waga tekstu */
+    line-height: 1.75; /* Większe odstępy między liniami */
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 15px 0;
+}
+
+header h1 {
+    font-size: 1.8em; /* Zmniejszenie nagłówka */
+    font-weight: 500; /* Lżejszy font */
+    text-align: center;
+    margin: 0;
+    color: #333;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    font-size: 1em; /* Zmniejszenie wielkości czcionki */
+    font-weight: 400; /* Lżejsza waga */
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+    color: #7D0D5E; /* Kolor hover */
+    border-bottom: 2px solid #7D0D5E;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid #9f4083; /* Aktywna zakładka */
+    color: #7D0D5E;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 75vh; /* Zmniejszona wysokość hero */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; 
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero-text h2 {
+    font-size: 2em; /* Zmniejszenie rozmiaru nagłówka */
+    margin-bottom: 10px;
+    font-weight: 500; /* Lżejsza waga */
+    animation: slideIn 1.5s ease-out;
+}
+
+.hero-text p {
+    font-size: 1.2em; /* Mniejszy rozmiar tekstu */
+    margin-bottom: 30px;
+    font-weight: 300; /* Lżejszy tekst */
+    animation: slideIn 2s ease-out;
+}
+
+.hero-text .button {
+    padding: 12px 25px; /* Mniejszy przycisk */
+    background-color: #7D0D5E;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    animation: fadeIn 2.5s ease-out;
+}
+
+.hero-text .button:hover {
+    background-color: #9f4083;
+}
+
+/* Main Content */
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 1.4em; /* Zmniejszenie wielkości nagłówków */
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 1em; /* Subtelniejszy tekst */
+    font-weight: 300;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #7D0D5E;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500; /* Mniejsza grubość */
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #9f4083;
+}
+
+/* Formularze */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form input,
+form textarea {
+    padding: 12px; /* Mniejsza wysokość pól formularza */
+    border: 2px solid #eaeaea;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #7D0D5E;
+    background-color: white;
+    outline: none;
+}
+
+form button {
+    padding: 12px 25px; /* Mniejszy przycisk */
+    background-color: #7D0D5E;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #9f4083;
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em; /* Mniejszy tekst w stopce */
+}
+
+iframe {
+    display: block;
+    margin: 0 auto; /* Wyśrodkowanie w poziomie */
+    max-width: 100%; /* Zapewnienie responsywności */
+    margin-bottom: 2rem;
+}
+
+.special-text{
+    color: #9f4083;
+    font-style: italic;
+}
+/*
+.welcome-section p{
+
+}*/
+
+.quote{
+    text-align: center;
+    font-style: italic;
+    margin: 2rem 10vw;
+}
+
+.button-container{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;    
+    text-align: center;
+    
+}
+
+.about-section {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-section h2, .about-section h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-section p {
+    font-weight: 300;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.about-section ul li {
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.about-section ul li strong {
+    font-weight: 500;
+    color: #7D0D5E;
+}
+
+.episode-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.episode-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.episode-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.episode-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: relative;
+    margin: 10% auto;
+    width: 60%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
 }
