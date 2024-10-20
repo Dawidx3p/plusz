@@ -1130,7 +1130,7 @@ iframe {
     font-weight: 500;
     color: #7D0D5E;
 }
-
+/* Siatka odcinków */
 .episode-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1143,6 +1143,7 @@ iframe {
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 .episode-item img {
@@ -1150,14 +1151,13 @@ iframe {
     display: block;
     transition: transform 0.3s ease;
     border-radius: 10px;
-    cursor: pointer;
 }
 
 .episode-item:hover img {
     transform: scale(1.05);
 }
 
-/* Modal */
+/* Responsywny modal */
 .modal {
     display: none;
     position: fixed;
@@ -1172,11 +1172,11 @@ iframe {
 .modal-content {
     position: relative;
     margin: 10% auto;
-    width: 60%;
-    padding: 20px;
+    width: 80%;
+    max-width: 560px; /* Maksymalna szerokość modal */
+    padding: 0;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .close {
@@ -1185,4 +1185,40 @@ iframe {
     right: 20px;
     font-size: 30px;
     cursor: pointer;
+}
+
+/* Responsywny iframe */
+.modal-content iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Zastosowanie proporcji 16:9 */
+    border: none;
+    border-radius: 10px;
+}
+
+/* Kontener z proporcjami dla iframe (16:9) */
+.featured-episode {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporcje 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%; /* Zapewnienie responsywności */
+}
+
+.featured-episode iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px; /* Dodajemy zaokrąglone rogi, opcjonalnie */
+}
+
+/* Dostosowanie iframe na mniejszych ekranach */
+@media (max-width: 768px) {
+    .featured-episode iframe {
+        width: 100%;
+        height: auto;
+    }
 }
