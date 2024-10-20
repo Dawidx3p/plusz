@@ -1211,6 +1211,9 @@ footer {
 
 /* Dostosowanie iframe na mniejszych ekranach */
 @media (max-width: 768px) {
+    .hero-text h2{
+        font-size: 1.5rem;
+    }
     .featured-episode iframe {
         width: 100%;
         height: auto;
